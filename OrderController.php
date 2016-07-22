@@ -32,8 +32,8 @@ class OrderController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'quantity' => 'required',
-            'price' => 'required'
+            'quantity' => 'required|integer',
+            'price' => 'required|numeric'
         ]);
 
 //        dd($request->all());
